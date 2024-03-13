@@ -10,5 +10,4 @@ class VkInternshipApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
