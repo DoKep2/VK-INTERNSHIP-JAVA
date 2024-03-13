@@ -20,7 +20,7 @@ jobs:
                 java-version: '17'
                 distribution: 'adopt'
             - name: run postgresql
-              run: make postgresql
+              run: make postgres
             - name: Build with Maven
               run: mvn -B package --file pom.xml
             - name: Run Tests
