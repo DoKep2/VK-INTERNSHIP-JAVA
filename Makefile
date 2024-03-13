@@ -12,7 +12,7 @@ pre: test
 build:
 	@./mvnw clean compile
 
-run: build
+run: postgres migrate build
 	@./mvnw spring-boot:run
 
 .PHONY: postgres test pre build run
