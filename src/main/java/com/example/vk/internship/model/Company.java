@@ -1,9 +1,7 @@
 package com.example.vk.internship.model;
 
-import jakarta.persistence.Entity;
-
 public class Company {
-    private String name;
+    private String companyName;
     private String catchPhrase;
     private String bs;
 
@@ -11,17 +9,17 @@ public class Company {
     }
 
     public Company(String name, String catchPhrase, String bs) {
-        this.name = name;
+        this.companyName = name;
         this.catchPhrase = catchPhrase;
         this.bs = bs;
     }
 
     public String getName() {
-        return name;
+        return companyName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.companyName = name;
     }
 
     public String getCatchPhrase() {

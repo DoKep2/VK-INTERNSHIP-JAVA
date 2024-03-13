@@ -1,20 +1,22 @@
 package com.example.vk.internship.model;
 
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class MyUser { // fixme: rename to User
+public class MyUser {
     @Id
     private Long id;
     private String name;
     private String username;
     private String email;
-
-//    private Address address;
+    @Embedded
+    private Address address;
     private String phone;
     private String website;
-//    private Company company;
+    @Embedded
+    private Company company;
 
 
     public MyUser() {
@@ -25,16 +27,17 @@ public class MyUser { // fixme: rename to User
                   String username,
                   String email,
                   String phone,
-                  String website)
-    {
+                  String website,
+                  Address address,
+                  Company company) {
         this.id = id;
         this.name = name;
         this.username = username;
         this.email = email;
         this.phone = phone;
         this.website = website;
-//        this.address = address;
-//        this.company = company;
+        this.address = address;
+        this.company = company;
     }
 
     public Long getId() {
@@ -81,19 +84,19 @@ public class MyUser { // fixme: rename to User
         this.website = website;
     }
 
-//    public Address getAddress() {
-//        return address;
-//    }
+    public Address getAddress() {
+        return address;
+    }
 
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
-//    public Company getCompany() {
-//        return company;
-//    }
+    public Company getCompany() {
+        return company;
+    }
 
-//    public void setCompany(Company company) {
-//        this.company = company;
-//    }
+    public void setCompany(Company company) {
+        this.company = company;
+    }
 }

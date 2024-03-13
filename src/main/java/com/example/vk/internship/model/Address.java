@@ -1,10 +1,13 @@
 package com.example.vk.internship.model;
 
+import jakarta.persistence.Embedded;
+
 public class Address {
     private String street;
     private String suite;
     private String city;
     private String zipcode;
+    @Embedded
     private Geo geo;
 
     public Address() {

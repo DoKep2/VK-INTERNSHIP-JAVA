@@ -25,9 +25,7 @@ public class SecurityConfig {
     }
 
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .userDetailsService(userAccountService)
-                .passwordEncoder(passwordEncoder());
+        auth.userDetailsService(userAccountService).passwordEncoder(passwordEncoder());
     }
 
     @Bean
