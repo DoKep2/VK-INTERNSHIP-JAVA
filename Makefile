@@ -1,6 +1,9 @@
 postgres:
 	@docker compose --file .docker/docker-compose.yml up -d postgres
 
+migrations:
+	@./mvnw flyway:migrate
+
 test:
 	@./mvnw clean test
 

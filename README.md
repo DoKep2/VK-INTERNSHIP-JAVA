@@ -22,6 +22,26 @@ make test
 
 Для поднятия postgres необходимо выполнить команду:
 
+
 ```bash
 make postgres
 ```
+
+### Миграции
+
+Для применения миграций необходимо выполнить команду:
+
+```bash
+make migrate
+```
+
+
+## Авторизация
+
+По умолчанию имеются пользователи:
+* user с ролью ROLE_USERS
+* admin с ролью ROLE_ADMIN
+* posts с ролью ROLE_POSTS
+* albums с ролью ROLE_ALBUMS
+
+У всех пароль `password`
