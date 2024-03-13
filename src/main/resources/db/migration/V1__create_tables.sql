@@ -74,3 +74,5 @@ create table user_roles
 alter table user_roles
     owner to postgres;
 
+alter table user_roles
+    add roles varchar(255);
