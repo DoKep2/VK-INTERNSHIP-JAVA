@@ -21,6 +21,8 @@ jobs:
                 distribution: 'adopt'
             - name: run postgresql
               run: make postgres
+            - name: run migrations
+              run: make migrate
             - name: Make mvnw executable
               run: chmod +x ./mvnw
             - name: build app
