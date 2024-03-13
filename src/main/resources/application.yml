@@ -1,0 +1,24 @@
+# spring settings
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cloud:
+    openfeign:
+      client:
+        config:
+          userClient:
+              url: https://jsonplaceholder.typicode.com/users
+          postClient:
+              url: https://jsonplaceholder.typicode.com/posts
+          albumClient:
+              url: https://jsonplaceholder.typicode.com/albums
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/
+    username: postgres
+    password: postgres
+
+server:
+  port: 8080
