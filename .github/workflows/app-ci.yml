@@ -18,9 +18,10 @@ jobs:
               uses: actions/setup-java@v2
               with:
                 java-version: '17'
+                distribution: 'amazon-corretto'
             - name: Build with Maven
               run: mvn -B package --file pom.xml
             - name: Run Tests
               run: mvn -B test
-            - name: Build Docker image
-              run: docker build . -t app
+            - name: Run docker-compose
+              run: docker-compose up -d
